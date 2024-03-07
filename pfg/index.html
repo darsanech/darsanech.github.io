@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../styles.css" /> 
+    <title>PFG</title>
+</head>
+
+<html>
+<div class="container">
+    <h1>Proyecto de final de grado</h1>
+    <p>
+        Buenas! Voy a presentarles mi proyecto de final de grado. 
+        Se trata de una aplicación para una empresa de alquiler de neveras en la que trabajé.
+    </p>
+    <h2>Funciones</h2>
+    <div class="columnas">
+        <div >
+            En este diagrama se puede ver las funciones creadas y quien las puede usar. <br>
+            Esto seria un breve resumen de lo que hacen:
+            <ul> 
+                <li><a class="index" href="#funcion1">Listar y modificar inventario: <br></a>
+                    permite gestionar el stock disponible, este irá cambiando conforme se alquilen y se devuelva el producto.</li>
+                <li> <a class="index" href="#funcion2">Visualizar repartidores: <br></a>
+                    muestra en un mapa la ultima localizacion detectada por los repartidores.</li>
+                <li> <a class="index" href="#funcion3">Listar y filtrar reservas:<br></a>
+                    lista todas las reservas dependiendo del filtro seleccionado.</li>
+                <li> <a class="index" href="#funcion4">Crear reservas: <br></a>
+                    muestra un formulario con los datos necesarios para crear una reserva.</li>
+                <li> <a class="index" href="#funcion4">Editar reservas: <br></a>
+                    permite modificar los datos de una reserva ya creada.</li>
+                <li> <a class="index" href="#funcion6">Visualizar reservas: <br></a>
+                    muestra en un mapa las parcelas del camping seleccionado y el estado de la reserva.</li>
+                <li> <a class="index" href="#funcion7">Descargar reservas: <br></a>
+                    descargar las reservas nuevas automaticamente.</li>
+            </ul>
+        </div>
+        <img width="40%" src="../imagenes/pfg/CasosUso.png">
+    </div>
+    <h2>Base de datos</h2>
+    <div>
+        <img src="../imagenes/pfg/BDD.png" width="100%">
+    </div>  
+    <h2>Diseño de la aplicación</h2>
+    <div class="columnas">
+        <img width="40%" src="../imagenes/pfg/Flow.png">
+        <div >
+            Este es un diagrama del flujo de navegacion de la aplicacion. <br>
+
+        </div>
+    </div>
+    <div>
+
+    </div>
+    <h2>La aplicación</h2>
+    <h3>Menu principal</h3>
+    <div class="columnas">
+        
+        <div>
+            Una vez iniciado session este es el menú principal. <br>
+            Abajo se encuentran el boton de cerrar session y el de las opciones de aministrador 
+            (unicamente si has entrado con una cuenta de administrador) <br>
+            Los demás botones sirven para seleccionar un filtro para listar las reservas, podemos ver como estan los nombres de los campings y otros, y un boton para filtrar por estado.
+        </div>
+        <img width="30%" src="../imagenes/pfg/App_menu.png">
+        <img width="30%" src="../imagenes/pfg/App_menu1.png">
+    </div>
+    <h3>Filtrar reservas por camping</h3>
+    <div class="columnas">
+        <div>
+            Este es el menú principal, aqui se encuentra el filtro principal, el de camping, 
+            seleccionando cualquiera de ellos, nos lleva una lista de todas las reservas de ese camping unicamente. <br>
+            Al filtrar por camping, en la parte inferior aparece un menu que permite filtrar por las reservas para entregar, recoger, o otros. <br>
+            Tambien se encuentran el boton para ver el mapa y otro para crear una reserva.<br>
+            Si arrastramos las reservas, aparecen menus adicionales para cambiar el estado de la reserva con más facilidad
+        </div>
+        <img width="30%" src="../imagenes/pfg/App_listReservas.png">
+        <img width="30%" src="../imagenes/pfg/App_swipe.png">
+
+    </div>
+    <h3>Filtrar reservas por estado</h3>
+    <div class="columnas">
+        <div>
+            Estas serian las opciones. Además de filtrar por estado y camping, se puede filtrar parcela, cliente o fecha. 
+        </div>
+        <img width="30%" src="../imagenes/pfg/App_searchEstado.png">
+        <img width="30%" src="../imagenes/pfg/App_searchEstado1.png">
+    </div>
+    <h3>Crear y editar reservas</h3>
+    <div class="columnas">
+        <img  width="30%" src="../imagenes/pfg/App_create1.png">
+        <img  width="30%" src="../imagenes/pfg/App_edit.png">
+        <div>
+            El formulario para editar o crear es el mismo. <br>
+            Aqui se accede o manteniendo clicado una reserva o en el boton que se encuentra en la lista de reservas.
+        </div>
+    </div>
+    <h3 id="funcion4">Mapa reservas</h3>
+    <div class="columnas">
+        <div>
+            Al selecionar visualizar las reservas en mapa, se ven todas las parcelas del camping y las reservas en codigo de color. <br>
+            Verde para entregar, rojo para recoger, purpura alquilado, amarillo para otros y gris para ninguno. <br>
+            Si se clica la parcela puedes ver su numero.
+        </div>
+        <img width="30%" src="../imagenes/pfg/App_map1.png">
+        <img width="30%" src="../imagenes/pfg/App_map.png">
+        
+    </div>
+
+
+
+    <h3 id="funcion1">Visualizar y modificar inventario</h3>
+    <div class="columnas">
+        <img width="30%" src="../imagenes/pfg/App_inventario.png">
+        <div width="60%">
+            Aqui se puede ver el inventario. Se ve el nombre del producto, cuanto hay en total y cuanto hay disponible.<br>
+            A la derecha hay un menú para añadir tanto al total como al disponible.
+        </div>
+    </div>
+    <h3 id="funcion2">Visualizar repartidores</h3>
+    <div class="columnas">
+        <img width="30%" src="../imagenes/pfg/App_loc.png">
+        <div >
+            En este mapa se puede ver la ultima ubicacion registrada de los repartidores.
+        </div>
+    </div>
+    
+    
+    <h3 id="funcion6">Visualizar reservas</h3>
+    <div class="row">
+        <img class="column" width="30%" src="../imagenes/pfg/App_inventario.png">
+        <div class="column">
+            
+        </div>
+    </div>
+    <h3 id="funcion7">Descargar reservas</h3>
+    <div class="row">
+        <img class="column" width="30%" src="../imagenes/pfg/App_inventario.png">
+        <div class="column">
+            
+        </div>
+    </div>
+
+</div>
+</html>

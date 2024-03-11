@@ -6,7 +6,7 @@
     to top,
     #0C9999 0%,
     #14FFFF 100%
-    );
+    ) no-repeat center center fixed;
     max-width: 1150px;
     margin-left: auto;
     margin-right: auto;
@@ -152,8 +152,8 @@
 }
 
 .container {
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 120%;
+    margin: 20px;
     background-color: white;
     padding: 20px;
     border-radius: 5px;

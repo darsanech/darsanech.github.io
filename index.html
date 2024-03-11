@@ -1,34 +1,121 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css" /> 
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Hola!</title>
 </head>
 <html>
-<body class="container">
-<h1 class="titulo">Mi portfolio</h1>
-<ul style="list-style-type:none;">
-    <li>
-        <h2>
-            <a class="index" href="https://darsanech.github.io/pokegames" target="_blank">Proyecto de final de grado</a>
-        </h2>
-        <dd>Aqui esta mi proyecto de final de grado</dd>
-    </li>
-    <li>
-        <h2>
-            <a class="index" href="https://darsanech.github.io/pokegames" target="_blank"> Juegos </a>
-        </h2>
-        <dd>Conjunto de minijuegos creados en typescript y angular, con la base de datos de 
-            <a href="https://pokeapi.co/" target="_blank">pokeapi.co</a></dd>
-        <ul>
-            <a class="index" href="https://darsanech.github.io/pokegames/sudoku" target="_blank">🟩 SUDOKU 🟥</a> 
-        </ul>
-        <ul>
-            <a class="index" href="https://darsanech.github.io/pokegames/breed" target="_blank">🥚 GUARDERIA 🥚</a>
-        </ul>
-        <ul>
-            <a class="index" href="https://darsanech.github.io/pokegames" target="_blank">WIP</a>
-        </ul>
-    </li>
-</ul>
+<body class="background fuente">
+    <div class="intro">
+        <div class="anexo">
+            <div class="nombre">
+                Darío Sánchez Echenique
+            </div>
+            <div class="descripcion">
+                ¡Hola! Me llamo Darío y soy un desarrollador de software junior. <br>
+                No tengo mucha experiencia, pero me esfuerzo en aprender. <br>
+                Me gustan los juegos de puzzles y el color celeste.
+            </div>
+        </div>
+        <div class="extra">
+            <div class="educacion borde">
+                <p style="font-size: 20px; margin: 5px;">Educación: <br> </p>
+                <p style="font-size: 18px; margin: 0px;"> Universidad de Gerona <br> </p>
+                    Grado en Ingeniería Informática<br>
+                    Ingeniería de Software
+            </div>
+            <div class="enlaces borde">
+                <div class="telefonoycorreo">
+                    <img src="./assets/imagenes/logos/mlogo-tel.png">
+                    638 233 191
+                </div>
+                <div class="telefonoycorreo">
+                    <img src="./assets/imagenes/logos/mlogo-mail.png">
+                    Correo: darsanech@gmail.com
+                    <button class="boton" onclick="copiarAlPortapapeles()">Copiar</button>
+                </div>
+                <button class="boton cv"><a class="cv" href="./assets/CV.pdf" target="_blank">Ver Curriculum</a></button>
+            </div>
+        </div>
+
+    </div>
+    <div id="tecnologias">
+        <div class="titulo">
+            Habilidades
+        </div>
+        <div class="tecnologias">
+            <img src="./assets/imagenes/logos/logo-net.png">
+            <img src="./assets/imagenes/logos/logo-aspnet.png">
+            <img src="./assets/imagenes/logos/logo-maui.png">
+            <img src="./assets/imagenes/logos/logo-cs.png">
+            <img src="./assets/imagenes/logos/logo-azure.png">
+            <img src="./assets/imagenes/logos/logo-mysql.png">
+            <img src="./assets/imagenes/logos/logo-ts.png">
+            <img src="./assets/imagenes/logos/logo-angular.png">
+            <img src="./assets/imagenes/logos/logo-html.png">
+        </div>
+    </div>
+    <div id="proyectos">
+        <div class="titulo">
+            Proyectos
+        </div>
+        <div class="grid-proyectos">
+            <div class="proyecto borde">
+                <a href="https://darsanech.github.io/pfg" target="_blank">
+                    <img  class="imagen-proyecto" src="./assets/imagenes/proyectos/pfg.png"></a>
+                <div class="titulo-proyecto">
+                    Proyecto de final de grado
+                </div>
+                <div>
+                    Una aplicación para gestionar las reservas de una empresa de alquiler de neveras en la que trabajé. <br>
+                </div>
+                <div class="tecnologias">
+                    <img src="./assets/imagenes/logos/logo-net.png">
+                    <img src="./assets/imagenes/logos/logo-aspnet.png">
+                    <img src="./assets/imagenes/logos/logo-maui.png">
+                    <img src="./assets/imagenes/logos/logo-cs.png">
+                    <img src="./assets/imagenes/logos/logo-azure.png">
+                    <img src="./assets/imagenes/logos/logo-mysql.png">
+                </div>
+            </div>
+            <div class="proyecto borde">
+                <a href="https://darsanech.github.io/pokegames/sudoku" target="_blank">
+                    <img  class="imagen-proyecto" src="./assets/imagenes/proyectos/sudoku.png"></a>
+                <div class="titulo-proyecto">
+                    Pokédoku
+                </div>
+                <div>
+                    Uno de los minijuegos creados para aprender a usar TypeScript y Angular. <br>
+                </div>
+                <div class="tecnologias">
+                    <img src="./assets/imagenes/logos/logo-ts.png">
+                    <img src="./assets/imagenes/logos/logo-angular.png">
+                    <img src="./assets/imagenes/logos/logo-html.png">
+                </div>
+            </div>
+            <div class="proyecto borde">
+                <a href="https://darsanech.github.io/pokegames/breed" target="_blank">
+                    <img  class="imagen-proyecto" src="./assets/imagenes/proyectos/breed.png"></a>
+                <div class="titulo-proyecto">
+                    Guardería Pokemon
+                </div>
+                <div>
+                    Uno de los minijuegos creados para aprender a usar TypeScript y Angular. <br>
+                </div>
+                <div class="tecnologias">
+                    <img src="./assets/imagenes/logos/logo-ts.png">
+                    <img src="./assets/imagenes/logos/logo-angular.png">
+                    <img src="./assets/imagenes/logos/logo-html.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 </html>
+<script>
+    function copiarAlPortapapeles() {
+      navigator.clipboard.writeText("darsanech@gmail.com");
+
+    }
+</script>

@@ -1,137 +1,154 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../styles.css" /> 
+    <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles.css"/>
     <title>PFG</title>
 </head>
 
 <html>
 <body class="background">
-    <div class="container">
-        <h1 class="titulo">Proyecto de final de grado</h1>
-        <p>
+    <div class="container rounded-5 background-container">
+        <div class="display-2 mt-5 mb-5">Proyecto de final de grado</div>
+        <div>
             ¡Buenas! Voy a mostrarles el proyecto de final de grado que hice. 
             Se trata de una aplicación para una empresa de alquiler de neveras en la que trabajé.<br>
             El front-end esta desarrollado en .NET MAUI, el back-end en en ASP.NET y hosteado en Azure App Services. <br>
             La base de datos general esta hecha con MySQL y también esta dentro de Azure. 
             La base de datos local, la que usa la aplicación, esta hecha con SQLite. <br>
             Para sincronizar ambas bases de datos se usó Dotmim.Sync y para los mapas se usó Leaflet.js <br>
-        </p>
-        <h2>Funciones</h2>
-        <div class="columnas">
-            <div >
-                En este diagrama se puede ver las funciones creadas y quien las puede usar. <br>
-                Esto seria un breve resumen de lo que hacen:
-                <ul> 
-                    <li>Listar y modificar inventario: <br>
-                        <dd>permite gestionar el stock disponible, este irá cambiando conforme se alquilen y se devuelva el producto.</dd></li>
-                    <li>Visualizar repartidores: <br>
-                        <dd>muestra en un mapa la ultima localización detectada por los repartidores.</dd></li>
-                    <li>Listar y filtrar reservas:<br>
-                        <dd>lista todas las reservas dependiendo del filtro seleccionado.</dd></li>
-                    <li>Crear reservas: <br>
-                        <dd>muestra un formulario con los datos necesarios para crear una reserva.</dd></li>
-                    <li>Editar reservas: <br>
-                        <dd>permite modificar los datos de una reserva ya creada.</dd></li>
-                    <li>Visualizar reservas: <br>
-                        <dd>muestra en un mapa las parcelas del camping seleccionado y el estado de la reserva.</dd></li>
-                    <li>Descargar reservas: <br>
-                        <dd>descargar las reservas nuevas automáticamente.</dd></li>
-                </ul>
+        </div>
+        <div class="h2 mt-3">Funciones</div>
+        <div class="row">
+            <div class="col-7">
+                <div>
+                    En este diagrama se puede ver las funciones creadas y quien las puede usar. <br>
+                    Esto seria un breve resumen de lo que hacen:
+                    <ul> 
+                        <li>Listar y modificar inventario: <br>
+                            <dd>permite gestionar el stock disponible, este irá cambiando conforme se alquilen y se devuelva el producto.</dd></li>
+                        <li>Visualizar repartidores: <br>
+                            <dd>muestra en un mapa la ultima localización detectada por los repartidores.</dd></li>
+                        <li>Listar y filtrar reservas:<br>
+                            <dd>lista todas las reservas dependiendo del filtro seleccionado.</dd></li>
+                        <li>Crear reservas: <br>
+                            <dd>muestra un formulario con los datos necesarios para crear una reserva.</dd></li>
+                        <li>Editar reservas: <br>
+                            <dd>permite modificar los datos de una reserva ya creada.</dd></li>
+                        <li>Visualizar reservas: <br>
+                            <dd>muestra en un mapa las parcelas del camping seleccionado y el estado de la reserva.</dd></li>
+                        <li>Descargar reservas: <br>
+                            <dd>descargar las reservas nuevas automáticamente.</dd></li>
+                    </ul>
+                </div>
             </div>
-            <img width="40%" src="../assets/imagenes/pfg/CasosUso.png">
+            <div class="col-5">
+                <img class="img-fluid" src="../assets/imagenes/pfg/CasosUso.png">
+            </div>
         </div>  
-        <h2>Base de datos</h2>
+        <div class="h2 mt-3">Base de datos</div>
         <div>
-            <img src="../assets/imagenes/pfg/BDD.png" width="100%">
+            <img class="img-fluid" src="../assets/imagenes/pfg/BDD.png" width="100%">
         </div>  
-        <h2>Diseño de la aplicación</h2>
-        <div class="columnas">
-            <img width="40%" src="../assets/imagenes/pfg/Flow.png">
-            <div >
+        <div class="h2 mt-3">Diseño de la aplicación</div>
+        <div class="row justify-content-around">
+            <div class="col-12">
                 Este es un diagrama del flujo de navegación de la aplicación. <br>
                 Una vez iniciada session, se puede acceder a las reservas o bien a las funciones de administrador. 
                 Estas solo están disponibles si el usuario tiene rol administrador. <br>
             </div>
+            <div class="col-6 ">
+                <img class="img-fluid" src="../assets/imagenes/pfg/Flow.png">
+            </div>
         </div>
-        <div>
-        </div>
-        <h2>La aplicación</h2>
-        <h3>Menu principal</h3>
-        <div class="columnas">
-            
-            <div>
+        <div class="h2 mt-3">La aplicación</div>
+        <div class="h5 mt-1">Menu principal</div>
+        <div class="row justify-content-around">
+            <div class="col-12">
                 Una vez iniciado session este es el menú principal. <br>
                 Abajo se encuentran el botón de cerrar session y el de las opciones de administrador 
                 (unicamente si has entrado con una cuenta de administrador) <br>
                 Los demás botones sirven para seleccionar un filtro para listar las reservas, podemos ver como están los nombres de los campings y otros, y un boton para filtrar por estado.
             </div>
-            <img width="30%" src="../assets/imagenes/pfg/App_menu.jpeg">
+            <div  class="col-3">
+                <img class="img-fluid m-2" src="../assets/imagenes/pfg/App_menu.jpeg">
+            </div>
         </div>
-        <h3>Filtrar reservas por camping</h3>
-        <div class="columnas">
-            <div>
+        <div class="h5 mt-1">Filtrar reservas por camping</div>
+        <div class="row justify-content-around">
+            <div class="col-12">
                 Este es el menú principal, aquí se encuentra el filtro principal, el de camping, 
                 seleccionando cualquiera de ellos, nos lleva una lista de todas las reservas de ese camping unicamente. <br>
                 Al filtrar por camping, en la parte inferior aparece un menu que permite filtrar por las reservas para entregar, recoger, o otros. <br>
                 También se encuentran el botón para ver el mapa y otro para crear una reserva.<br>
                 Si arrastramos las reservas, aparecen menus adicionales para cambiar el estado de la reserva con más facilidad
             </div>
-            <img width="30%" src="../assets/imagenes/pfg/App_listReservas.jpeg">
-            <img width="30%" src="../assets/imagenes/pfg/App_swipe.jpeg">
-    
+            <div class="col-3">
+                <img class="img-fluid m-2" src="../assets/imagenes/pfg/App_listReservas.jpeg">
+            </div>
+            <div class="col-3">
+                <img class="img-fluid m-2" src="../assets/imagenes/pfg/App_swipe.jpeg">
+            </div>
+
         </div>
-        <h3>Filtrar reservas por estado</h3>
-        <div class="columnas">
-            <div>
+        <div class="h5 mt-1">Filtrar reservas por estado</div>
+        <div class="row justify-content-around">
+            <div class="col-12">
                 Estas serian las opciones. Además de filtrar por estado y camping, se puede filtrar parcela, cliente o fecha. 
             </div>
-            <img width="30%" src="../assets/imagenes/pfg/App_searchEstado.jpeg">
-            <img width="30%" src="../assets/imagenes/pfg/App_searchEstado1.jpeg">
+            <div class="col-3">
+                <img class="img-fluid m-2" src="../assets/imagenes/pfg/App_searchEstado.jpeg">
+            </div>
+            <div class="col-3">
+                <img class="img-fluid m-2" src="../assets/imagenes/pfg/App_searchEstado1.jpeg">
+            </div>
         </div>
-        <h3>Crear y editar reservas</h3>
-        <div class="columnas">
-            <div>
+        <div class="h5 mt-1">Crear y editar reservas</div>
+        <div class="row justify-content-around">
+            <div class="col-12">
                 El formulario para editar o crear es el mismo. <br>
                 Aquí se accede o manteniendo clicado una reserva o en el botón que se encuentra en la lista de reservas.
             </div>
-            <img  width="30%" src="../assets/imagenes/pfg/App_create1.jpeg">
-            <img  width="30%" src="../assets/imagenes/pfg/App_edit.jpeg">
-            
+            <div class="col-3">
+                <img class="img-fluid m-2" src="../assets/imagenes/pfg/App_create1.jpeg">
+            </div>
+            <div class="col-3">
+                <img class="img-fluid m-2" src="../assets/imagenes/pfg/App_edit.jpeg">
+            </div>
         </div>
-        <h3>Mapa reservas</h3>
-        <div class="columnas">
-            <div>
+        <div class="h5 mt-1">Mapa reservas</div>
+        <div class="row justify-content-around">
+            <div class="col-12">
                 Al seleccionar visualizar las reservas en mapa, se ven todas las parcelas del camping y las reservas en código de color. <br>
                 Verde para entregar, rojo para recoger, purpura alquilado, amarillo para otros y gris para ninguno. <br>
                 Si se clica la parcela puedes ver su numero.
             </div>
-            <img width="30%" src="../assets/imagenes/pfg/App_map1.jpeg">
-            <img width="30%" src="../assets/imagenes/pfg/App_map.jpeg">
-            
+            <div class="col-3">
+                <img class="img-fluid m-2" src="../assets/imagenes/pfg/App_map1.jpeg">
+            </div>
+            <div class="col-3">
+                <img class="img-fluid m-2" src="../assets/imagenes/pfg/App_map.jpeg">
+            </div>
         </div>
-    
-    
-    
-        <h3>Visualizar y modificar inventario</h3>
-        <div class="columnas">
-            <div width="60%">
+        <div class="h5 mt-1">Visualizar y modificar inventario</div>
+        <div class="row justify-content-around">
+            <div class="col-12">
                 Aquí se puede ver el inventario. Se ve el nombre del producto, cuanto hay en total y cuanto hay disponible.<br>
                 A la derecha hay un menú para añadir tanto al total como al disponible.
             </div>
-            <img width="30%" src="../assets/imagenes/pfg/App_inventario.jpeg">
-    
+            <div class="col-3">
+                <img class="img-fluid m-2" src="../assets/imagenes/pfg/App_inventario.jpeg">
+            </div>
         </div>
-        <h3>Visualizar repartidores</h3>
-        <div class="columnas">
-            <div >
+        <div class="h5 mt-1">Visualizar repartidores</div>
+        <div class="row justify-content-around">
+            <div class="col-12">
                 En este mapa se puede ver la ultima ubicación registrada de los repartidores.
             </div>
-            <img width="30%" src="../assets/imagenes/pfg/App_loc.png">
-    
+            <div class="col-3">
+                <img class="img-fluid m-2" src="../assets/imagenes/pfg/App_loc.png">
+            </div>
         </div>
-        
-    
     </div>
+    
 </body>
-
 </html>

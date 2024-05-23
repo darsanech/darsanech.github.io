@@ -33,4 +33,10 @@
           transform: scale(1.1);
         }
       }
+      .container-img-project{
+        @apply flex flex-row justify-evenly
+      }
+    .img-project{
+        @apply w-1/6
+    }
 }

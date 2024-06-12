@@ -2,41 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    .boton{
-        @apply border border-gray-500 bg-gray-200 rounded ml-2
+@layer components {
+  .boton {
+    @apply border border-gray-500 bg-gray-200 rounded ml-2;
+  }
+  .boton:hover {
+    @apply bg-gray-300;
+  }
+  .imgHab {
+    @apply aspect-square w-20 h-20;
+  }
+  .imgProj {
+    @apply aspect-square w-8 h-8;
+  }
+  .borde-proyecto {
+    @apply border-4 border-cyan-300 rounded-xl text-center p-2;
+  }
+  .borde-imagen-proyecto {
+    @apply border-2 border-cyan-500 rounded-xl inline-block;
+  }
+  .borde-imagen-proyecto:hover {
+    animation-name: selectProject;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes selectProject {
+    from {
+      transform: scale(1);
     }
-    .boton:hover{
-        @apply bg-gray-300
+    to {
+      transform: scale(1.1);
     }
-    .imgHab{
-        @apply aspect-square w-20 h-20
+  }
+  .container-img-project {
+    @apply flex flex-row justify-evenly;
+  }
+  .img-project {
+    @apply w-1/6;
+  }
+  .logo-gh {
+    @apply inline-block cursor-pointer;
+  }
+  .logo-gh:hover {
+    animation-name: toGh;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes toGh {
+    from {
+      transform: scale(1);
     }
-    .borde-proyecto{
-        @apply border-4 border-cyan-300 rounded-xl text-center p-2
+    to {
+      transform: scale(1.5);
     }
-    .borde-imagen-proyecto{
-        @apply border-2 border-cyan-500 rounded-xl inline-block
-    }
-    .borde-imagen-proyecto:hover{
-        animation-name: selectProject;
-        animation-duration: 1.5s;
-        animation-direction: alternate;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-    }
-    @keyframes selectProject {
-        from {
-          transform: scale(1);
-        }
-        to {
-          transform: scale(1.1);
-        }
-      }
-      .container-img-project{
-        @apply flex flex-row justify-evenly
-      }
-    .img-project{
-        @apply w-1/6
-    }
+  }
+  .container-img-project {
+    @apply flex flex-row justify-evenly;
+  }
 }
